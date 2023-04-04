@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/emon"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Nome do Animal"
+        android:inputType="textPersonName"
+        android:selectAllOnFocus="true"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/fechar"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:onClick="finalizar"
+        android:text="Fechar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dadobasico"
+        app:layout_constraintVertical_bias="0.089" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup"
+        android:layout_width="0dp"
+        android:layout_height="63dp"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.703"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/emon"
+        app:layout_constraintVertical_bias="0.0">
+
+        <RadioButton
+            android:id="@+id/mas"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Macho"
+            android:textAlignment="viewStart"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteX="-100dp"
+            tools:layout_editor_absoluteY="430dp" />
+
+        <RadioButton
+            android:id="@+id/fem"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Fêmea"
+            android:textSize="16sp" />
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/nascdata"
+        android:layout_width="0dp"
+        android:layout_height="67dp"
+        android:ems="10"
+        android:focusable="auto"
+        android:hint="01/01/2000"
+        android:inputType="date"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintVertical_bias="0.034" />
+
+    <CheckBox
+        android:id="@+id/castrado"
+        android:layout_width="match_parent"
+        android:layout_height="59dp"
+        android:text="@string/castrado"
+        android:textAlignment="textStart"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <Button
+        android:id="@+id/dadobasico"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:onClick="basicodado"
+        android:text="Dados do Animal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/altesp"
+        app:layout_constraintVertical_bias="0.059" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="#535E9C"
+        android:text="Data de Nascimento"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/castrado"
+        app:layout_constraintVertical_bias="0.05" />
+
+    <TextView
+        android:id="@+id/altesp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Especie: --------"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="@+id/altpes"
+        app:layout_constraintEnd_toStartOf="@+id/altpes"
+        app:layout_constraintHorizontal_bias="0.283"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/altpes"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/altpes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Peso: --"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.863"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nascdata"
+        app:layout_constraintVertical_bias="0.04" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
